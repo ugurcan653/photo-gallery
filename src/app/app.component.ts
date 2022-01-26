@@ -18,8 +18,8 @@ export class AppComponent {
   title = 'capacitor-app';
   barcodeData: any;
   token: string = "karpuz";
-  isUpdated: any;
-  progress: string;
+  isUpdated: any = "bu da boş";
+  progress: string = "bi şey yok";
   constructor(private sn: DomSanitizer, private barcodeScanner: BarcodeScanner, private appflowDeploy: Deploy) {
   }
   scanner() {
@@ -90,7 +90,7 @@ export class AppComponent {
           await this.appflowDeploy.reloadApp();
 
       } catch (exp) {
-          console.log(exp)
+        this.progress = exp
           // failed to update application
       }
   }
