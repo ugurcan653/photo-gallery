@@ -5,6 +5,8 @@ import { Network } from '@capacitor/network';
 import { BarcodeScanner } from '@awesome-cordova-plugins/barcode-scanner/ngx';
 import { Browser } from '@capacitor/browser';
 import {ActionPerformed,PushNotificationSchema,PushNotifications,Token} from '@capacitor/push-notifications';
+import { Deploy } from 'cordova-plugin-ionic/dist/ngx';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -16,7 +18,9 @@ export class AppComponent {
   title = 'capacitor-app';
   barcodeData: any;
   token: string = "karpuz";
-  constructor(private sn: DomSanitizer, private barcodeScanner: BarcodeScanner) {
+  isUpdated: any;
+  progress: string;
+  constructor(private sn: DomSanitizer, private barcodeScanner: BarcodeScanner, private appflowDeploy: Deploy) {
   }
   scanner() {
     this.barcodeScanner.scan().then(barcodeData => {
@@ -71,5 +75,24 @@ export class AppComponent {
         alert('Push action performed: ' + JSON.stringify(notification));
       },
     );
+  }
+  async checkUpdate(){
+    this.isUpdated = await this.appflowDeploy.checkForUpdate();
+    if (this.isUpdated.available) {
+      try {
+          await this.appflowDeploy.downloadUpdate((progress) => {
+            this.progress = `Please wait. Downloading Release %${progress}`;
+          });
+
+          await this.appflowDeploy.extractUpdate((progress) => {
+            this.progress = `Please wait. Extracting Release %${progress}`;
+          });
+          await this.appflowDeploy.reloadApp();
+
+      } catch (exp) {
+          console.log(exp)
+          // failed to update application
+      }
+  }
   }
 }

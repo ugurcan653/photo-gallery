@@ -36,3 +36,11 @@
 <button (click)="initFCM()">init FCM</button>
 <p>{{token}}</p>
 
+
+<div>
+  ------------------------------------------------------------------------------------
+</div>
+<h1>Deploy</h1>
+<button (click)="checkUpdate()">update</button>
+<p *ngIf="isUpdated">{{isUpdated | json}}</p>
+<p *ngIf="progress">{{progress}}</p>
