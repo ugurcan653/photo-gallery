@@ -1,3 +1,38 @@
-<ion-app>
-  <ion-router-outlet></ion-router-outlet>
-</ion-app>
+<div>güncel değil</div>
+<h1>Camera</h1>
+<button (click)="takePicture()">Fotoğraf çek!</button>
+<img *ngIf="photo" [src]="photo">
+<div>
+  ------------------------------------------------------------------------------------
+</div>
+
+<h1>Network</h1>
+<button (click)="logCurrentNetworkStatus()">Ağ göster</button>
+<p *ngIf="status">{{status | json}}</p>
+
+<div>
+  ------------------------------------------------------------------------------------
+</div>
+
+<h1>Barcode Scanner</h1>
+<button (click)="scanner()">scan</button>
+<p *ngIf="barcodeData">{{barcodeData | json}}</p>
+
+
+<div>
+  ------------------------------------------------------------------------------------
+</div>
+
+<h1>Navigation</h1>
+<button (click)="openCapacitorSite()">Go To Capacitor</button>
+
+
+
+
+<div>
+  ------------------------------------------------------------------------------------
+</div>
+<h1>Token</h1>
+<button (click)="initFCM()">init FCM</button>
+<p>{{token}}</p>
+

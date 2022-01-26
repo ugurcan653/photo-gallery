@@ -1,0 +1,99 @@
+{
+  "project_info": {
+    "project_number": "199835731237",
+    "firebase_url": "https://t4c-assistant.firebaseio.com",
+    "project_id": "t4c-assistant",
+    "storage_bucket": "t4c-assistant.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:199835731237:android:0912a9a09cc10331",
+        "android_client_info": {
+          "package_name": "nl.lely.mobile.assistant"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "199835731237-6q89vp6j4cp8tovvv1vtckbt30ra5voh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "nl.lely.mobile.assistant",
+            "certificate_hash": "6646d65f841f1aa6dfda3d352f5036522b2e1c94"
+          }
+        },
+        {
+          "client_id": "199835731237-ce2dmlrt2limamrilrql4cif08bq08rc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "nl.lely.mobile.assistant",
+            "certificate_hash": "0626557d844208f2c22f05d3f8070150547ee1a3"
+          }
+        },
+        {
+          "client_id": "199835731237-q01bdgb32vhmbsc5n52q9q2asbc3nlb7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAAkukFhvbl4sSbsZi1aFgbDaGeAlV0MAM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "199835731237-q01bdgb32vhmbsc5n52q9q2asbc3nlb7.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "199835731237-5ksipkfhsp1on5igp973qcmcqpegmkcm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "nl.lely.mobile.assistant"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:199835731237:android:1eb8b6cc8ae48561c2c6cc",
+        "android_client_info": {
+          "package_name": "nl.lely.mobile.assistantNext"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "199835731237-q01bdgb32vhmbsc5n52q9q2asbc3nlb7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAAkukFhvbl4sSbsZi1aFgbDaGeAlV0MAM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "199835731237-q01bdgb32vhmbsc5n52q9q2asbc3nlb7.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "199835731237-5ksipkfhsp1on5igp973qcmcqpegmkcm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "nl.lely.mobile.assistant"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
